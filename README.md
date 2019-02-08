@@ -1,6 +1,7 @@
 <div align="center">
-<a href="https://swift-pm.herokuapp.com/">
-  <img src="https://github.com/cemac/SWIFTDB/blob/master/static/pageview.png"></a>
+<img src="https://github.com/cemac/cemac_generic/blob/master/Images/cemac.png">
+<a href="https://africanswift.org/">
+  <img src="https://github.com/cemac/SWIFTDB/blob/master/static/SWIFT-logo.jpg"></a>
   <br>
 </div>
 
