@@ -26,7 +26,7 @@ import os
 import time
 import datetime
 import tkinter as tk
-from tkinter import colorchooser, filedialog
+from tkinter import colorchooser, filedialog, ttk
 import PIL.Image
 import PIL.ImageTk
 import PIL.ImageDraw
@@ -40,7 +40,7 @@ else:
 
 
 # Application
-class App(tk.Frame):
+class App(ttk.Frame):
     def __init__(self, master):
 
         # This section of code looks in the current directory and generates
@@ -112,7 +112,7 @@ class App(tk.Frame):
         ####################################################################
         # Here the tkinter GUI application is described
         # Basic setup
-        tk.Frame.__init__(self, master)
+        ttk.Frame.__init__(self, master)
         self.pack(padx=5, pady=5)
         self.master.title("Image Viewer")
         self.master.resizable(False, False)
@@ -161,7 +161,7 @@ class App(tk.Frame):
         tk.Label(self, text="Var").grid(row=1, column=12, columnspan=3)
         self.optionmenu4.grid(row=2, column=12, columnspan=3)
         # Previous button
-        self.previous_button = tk.Button(self, text="<", command=self.previous)
+        self.previous_button = ttk.Button(self, text="<", command=self.previous)
         self.previous_button.grid(row=2, column=15)
         # Time drop down option box
         self.var5 = tk.StringVar(self)
@@ -169,7 +169,7 @@ class App(tk.Frame):
         tk.Label(self, text="Time").grid(row=1, column=16, columnspan=3)
         self.optionmenu5.grid(row=2, column=16, columnspan=3)
         # Next button
-        self.next_button = tk.Button(self, text=">", command=self.next)
+        self.next_button = ttk.Button(self, text=">", command=self.next)
         self.next_button.grid(row=2, column=19)
         # Overlay button
         self.var6 = tk.StringVar(self)
@@ -178,14 +178,14 @@ class App(tk.Frame):
         tk.Label(self, text="Overlay").grid(row=1, column=20, columnspan=3)
         self.optionmenu6.grid(row=2, column=20, columnspan=3)
         #  Submit button
-        self.submit_button = tk.Button(self, text="Submit",
+        self.submit_button = ttk.Button(self, text="Submit",
                                        command=self.check_vals)
         self.submit_button.grid(row=2, column=23, columnspan=3)
         # Select pen
-        self.pen_button = tk.Button(self, text='pen', command=self.choose_pen)
+        self.pen_button = ttk.Button(self, text='pen', command=self.choose_pen)
         self.pen_button.grid(row=3, column=3, columnspan=3)
         # Select color for annotations
-        self.color_button = tk.Button(self, text='colour',
+        self.color_button = ttk.Button(self, text='colour',
                                       command=self.choose_color)
         self.color_button.grid(row=3, column=6, columnspan=3)
         # Select pen thickness
@@ -195,60 +195,60 @@ class App(tk.Frame):
         self.thickness_button.set(5)
         self.thickness_button.grid(row=3, column=9, columnspan=3)
         # Undo button
-        self.undo_button = tk.Button(self, text='undo', command=self.undo)
+        self.undo_button = ttk.Button(self, text='undo', command=self.undo)
         self.undo_button.grid(row=3, column=12, columnspan=3)
         # Clear button
-        self.clear_button = tk.Button(self, text='clear notes',
+        self.clear_button = ttk.Button(self, text='clear notes',
                                       command=self.clear)
         self.clear_button.grid(row=3, column=15, columnspan=3)
         # Clear background button
-        self.clear_back_button = tk.Button(self, text='clear background',
+        self.clear_back_button = ttk.Button(self, text='clear background',
                                            command=self.clear_back)
         self.clear_back_button.grid(row=3, column=18, columnspan=3)
         # Save with background button
-        self.save_all_button = tk.Button(self, text='save',
+        self.save_all_button = ttk.Button(self, text='save',
                                command=lambda: self.save_all_crop(self.canvas))
         self.save_all_button.grid(row=3, column=21, columnspan=3)
         # stamp button 1
         self.conv_img1 = PIL.Image.open(resource_path("Conv_blk.png"))
         self.conv_reimg1 = self.conv_img1.resize((30, 30))
         self.conv_tkimg1 = PIL.ImageTk.PhotoImage(self.conv_reimg1)
-        self.conv_button1 = tk.Button(self, image=self.conv_tkimg1,
+        self.conv_button1 = ttk.Button(self, image=self.conv_tkimg1,
                            command=lambda: self.choose_stamp(self.conv_tkimg1))
         self.conv_button1.grid(row=1, column=1)
         # stamp button 2
         self.conv_img2 = PIL.Image.open(resource_path("Conv_wht.png"))
         self.conv_reimg2 = self.conv_img2.resize((30, 30))
         self.conv_tkimg2 = PIL.ImageTk.PhotoImage(self.conv_reimg2)
-        self.conv_button2 = tk.Button(self, image=self.conv_tkimg2,
+        self.conv_button2 = ttk.Button(self, image=self.conv_tkimg2,
                            command=lambda: self.choose_stamp(self.conv_tkimg2))
         self.conv_button2.grid(row=1, column=2)
         # stamp button 3
         self.conv_img3 = PIL.Image.open(resource_path("Conv_blk_grw.png"))
         self.conv_reimg3 = self.conv_img3.resize((30, 30))
         self.conv_tkimg3 = PIL.ImageTk.PhotoImage(self.conv_reimg3)
-        self.conv_button3 = tk.Button(self, image=self.conv_tkimg3,
+        self.conv_button3 = ttk.Button(self, image=self.conv_tkimg3,
                            command=lambda: self.choose_stamp(self.conv_tkimg3))
         self.conv_button3.grid(row=2, column=1)
         # stamp button 4
         self.conv_img4 = PIL.Image.open(resource_path("Conv_wht_grw.png"))
         self.conv_reimg4 = self.conv_img4.resize((30, 30))
         self.conv_tkimg4 = PIL.ImageTk.PhotoImage(self.conv_reimg4)
-        self.conv_button4 = tk.Button(self, image=self.conv_tkimg4,
+        self.conv_button4 = ttk.Button(self, image=self.conv_tkimg4,
                            command=lambda: self.choose_stamp(self.conv_tkimg4))
         self.conv_button4.grid(row=2, column=2)
         # stamp button 5
         self.conv_img5 = PIL.Image.open(resource_path("Conv_blk_dcy.png"))
         self.conv_reimg5 = self.conv_img5.resize((30, 30))
         self.conv_tkimg5 = PIL.ImageTk.PhotoImage(self.conv_reimg5)
-        self.conv_button5 = tk.Button(self, image=self.conv_tkimg5,
+        self.conv_button5 = ttk.Button(self, image=self.conv_tkimg5,
                            command=lambda: self.choose_stamp(self.conv_tkimg5))
         self.conv_button5.grid(row=3, column=1)
         # stamp button 6
         self.conv_img6 = PIL.Image.open(resource_path("Conv_wht_dcy.png"))
         self.conv_reimg6 = self.conv_img6.resize((30, 30))
         self.conv_tkimg6 = PIL.ImageTk.PhotoImage(self.conv_reimg6)
-        self.conv_button6 = tk.Button(self, image=self.conv_tkimg6,
+        self.conv_button6 = ttk.Button(self, image=self.conv_tkimg6,
                            command=lambda: self.choose_stamp(self.conv_tkimg6))
         self.conv_button6.grid(row=3, column=2)
         # Setup image canvas
