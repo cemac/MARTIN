@@ -52,7 +52,7 @@ Overlays, stamps and pen.
 
 ## Developers
 
-Please see [docs/DEVELOPER_GUIDE.pdf](./docs/DEVELOPER_GUIDE.pdf) for information
+Please see [docs/DEVELOPER_GUIDE.md](./docs/DEVELOPER_GUIDE.md) for information
 for App Developers.
 
 
