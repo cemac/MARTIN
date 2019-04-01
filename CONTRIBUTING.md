@@ -8,7 +8,7 @@ At the moment the 2 main ways to contribute are via Bug reports and Feature requ
 
 ### Reporting Bugs
 
-This section guides you through submitting a bug report. Following these guidelines helps maintainers and the community understand your report :pencil:, reproduce the behavior :computer: :computer:, and find related reports :mag_right:.
+This section guides you through submitting a bug report. Following these guidelines helps maintainers and the community understand your report :pencil:, reproduce the behaviour :computer: :computer:, and find related reports :mag_right:.
 
  Fill in [the template](https://github.com/cemac/MARTIN/issues/new?assignees=&labels=&template=bug_report.md&title=%5BBUG%5D).
 
@@ -64,4 +64,4 @@ Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com
 
 ## Acknowledgements ##
 
-This code of conduct template is based off of Atom's wonderful and thorough [exmaple](https://github.com/atom/atom/blob/master/CONTRIBUTING.md).
+This code of conduct template is based off of Atom's wonderful and thorough [example](https://github.com/atom/atom/blob/master/CONTRIBUTING.md).

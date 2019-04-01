@@ -20,15 +20,29 @@ This work forms part of the Global Challenged Research Fund (GCRF) [African SWIF
 
 ## Requirements
 
-*coming soon*
+* Windows or Linux OS
 
 # Installation
 
-*coming soon*
+1. Download and extract MARTIN
+2. Use the specific folder structure outlined in MARTIN_IMAGE_ANNOTATIONS
+3. It is possible to request example image data (Collaborators only)
 
 # Usage
 
-*coming soon*
+** See Full USER Guide in [docs/README_MARTIN.pdf](docs/README_MARTIN.pdf)
+* `MARTIN_WINDOWS.exe` (Windows OS)
+* `MARTIN_Linux` (linux)
+* Execute appropriate file
+* Select “Source” (model from which images were generated), “Region” (for testbed 1a
+these are EA; East Africa, WA; West Africa and TropA; Tropical Africa), “Init”
+(initiation time of simulation), “Var” (variable you want to see image of and “Time”
+(the forecast time e.g. 000 indicates the analysis step while 009 indicates a 9 hour
+forecast.
+* Once selected you can either press the “Submit” button or one of the time
+forward or back arrows to load an image.
+* There are 3 different annotation methods available with MARTIN. These are
+Overlays, stamps and pen.
 
 # Contributing #
 
