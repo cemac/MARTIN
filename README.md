@@ -29,7 +29,7 @@ This work forms part of the Global Challenged Research Fund (GCRF) [African SWIF
 
 # Usage
 
-** See Full USER Guide in [docs/README_MARTIN.pdf](docs/README_MARTIN.pdf)
+**See Full USER Guide in [docs/README_MARTIN.pdf](docs/README_MARTIN.pdf)**
 * `MARTIN_WINDOWS.exe` (Windows OS)
 * `MARTIN_Linux` (linux)
 * Execute appropriate file
