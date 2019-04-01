@@ -17,19 +17,19 @@ This work forms part of the Global Challenged Research Fund (GCRF) [African SWIF
 
 :construction: documentation in progress :construction:
 
-## Requirements
+# Requirements (USERS)
 
-* Windows or Linux OS
+* Platforms: Windows or Linux OS
 
-# Installation
+# Installation (USERS)
 
 1. Download and extract MARTIN
 2. Use the specific folder structure outlined in MARTIN_IMAGE_ANNOTATIONS
 3. It is possible to request example image data (Collaborators only)
 
-# Usage
+# Usage (USERS)
 
-**See Full USER Guide in [docs/README_MARTIN.pdf](docs/README_MARTIN.pdf)**
+**See Full USER Guide in [docs/USER_GUIDE.pdf](docs/USER_GUIDE.pdf)**
 * `MARTIN_WINDOWS.exe` (Windows OS)
 * `MARTIN_Linux` (linux)
 * Execute appropriate file
@@ -43,10 +43,18 @@ forward or back arrows to load an image.
 * There are 3 different annotation methods available with MARTIN. These are
 Overlays, stamps and pen.
 
+<hr>
+
 # Contributing #
 
 * A full guide on submitting issue and bug are given in our [contribution guidelines](https://github.com/cemac/MARTIN/blob/master/CONTRIBUTING.md)
 * Please use our issue templates for feature requests and bug fixes.
+
+## Developers
+
+Please see [docs/DEVELOPER_GUIDE.pdf](docs/DEVELOPER_GUIDE.pdf) for information
+for App Developers.
+
 
 # License
 
