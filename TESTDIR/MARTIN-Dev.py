@@ -31,7 +31,7 @@ import PIL.Image
 import PIL.ImageTk
 import PIL.ImageDraw
 import platform
-from TKMARTINtools import flat, resource_path
+from TKMARTINtools_dev import flat, resource_path
 plat = platform.system()
 if plat == "Linux" or "Unix":
     import pyscreenshot as ImageGrab
