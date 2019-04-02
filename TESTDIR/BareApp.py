@@ -18,13 +18,23 @@ Memebers:
 
 import tkinter as tk
 from tkinter import colorchooser, filedialog, ttk
+import PIL.Image
+import PIL.ImageTk
+import PIL.ImageDraw
+import platform
+from TKMARTINtools_dev import flat, resource_path
+plat = platform.system()
+if plat == "Linux" or "Unix":
+    import pyscreenshot as ImageGrab
+else:
+    import PIL.ImageGrab as ImageGrab
 
 
 class Toolbar(ttk.Frame):
     def __init__(self, master):
         super().__init__()
         self.FONT_SIZE = 12
-        self.WINDOW_TITLE = "TEST"
+        self.WINDOW_TITLE = "MARTIN - Image Viewer"
         self.open_file = ""
         self.master.geometry("800x600")
         self.menubar = tk.Menu(self, bg="lightgrey", fg="black")
@@ -126,6 +136,15 @@ class Statusbar(ttk.Frame):
 class Main(ttk.Frame):
     def __init__(self, master):
         super().__init__()
+        # Logo
+        self.height = root.winfo_screenheight()
+        logo_file = resource_path("MARTINlogo_small.png")
+        self.logo = PIL.Image.open(logo_file)
+        self.relogo = self.logo.resize((int(self.height * 0.15),
+                                        int(self.height * 0.15)))
+        self.tklogo = PIL.ImageTk.PhotoImage(self.relogo)
+        self.logo_label = tk.Label(self, image=self.tklogo)
+        self.logo_label.grid(row=1, column=0, rowspan=3)
 
 
 class App(ttk.Frame):

@@ -268,7 +268,7 @@ class App(ttk.Frame):
         self.status = tk.Label(self.master, text='Please make selection',
                                bg='gray', font=('Helvetica', 15), bd=2,
                                fg='black', relief='sunken', anchor='w')
-        self.status.pack(side='bottom', fill='x')
+
         self.setup()
 
     # Setup drawing on image
@@ -358,10 +358,10 @@ class App(ttk.Frame):
         print(file_name)
 
         if file_name:
-            self.status['text'] = 'Annotate image as required'
+            self.master.status['text'] = 'Annotate image as required'
         else:
             file_name = resource_path("No_image_loaded.png")
-            self.status['text'] = 'Cannot find image please select other option'
+            self.master.status['text'] = 'Cannot find image please select other option'
 
         self.im = PIL.Image.open(file_name)
         aspect_ratio = self.im.size[0] / self.im.size[1]
