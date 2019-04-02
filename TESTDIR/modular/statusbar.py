@@ -7,9 +7,9 @@ class Statusbar(ttk.Frame):
         """ Simple Status Bar class - based on Frame """
         super().__init__()
         self.master = master
-        self.label = ttk.Label(self,anchor=tk.W)
-        
-    def set(self,texto):
+        self.label = ttk.Label(self, anchor=tk.W)
+
+    def set(self, texto):
         self.label.config(text=texto)
         self.label.update_idletasks()
 
