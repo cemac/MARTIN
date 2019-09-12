@@ -8,6 +8,7 @@
  <h1> <center> MARTIN SWIFT GUI </center> </h1>
 
 [![DOI](https://zenodo.org/badge/169722642.svg)](https://zenodo.org/badge/latestdoi/169722642) [![GitHub release](https://img.shields.io/github/release/cemac/MARTIN.svg)](https://github.com/cemac/MARTIN/releases) [![GitHub top language](https://img.shields.io/github/languages/top/cemac/MARTIN.svg)](https://github.com/cemac/MARTIN) [![GitHub issues](https://img.shields.io/github/issues/cemac/MARTIN.svg)](https://github.com/cemac/MARTIN/issues) [![GitHub last commit](https://img.shields.io/github/last-commit/cemac/MARTIN.svg)](https://github.com/cemac/MARTIN/commits/master) [![GitHub All Releases](https://img.shields.io/github/downloads/cemac/MARTIN/total.svg)](https://github.com/cemac/MARTIN/releases)
+[![HitCount](http://hits.dwyl.io/{cemac}/{MARTIN}.svg)](http://hits.dwyl.io/{cemac}/{MARTIN})
 
 
 A python graphical user interface for the viewing of model and satellite imagery. MARTIN allows for annotations to be made and the resultant images/annotations to be saved.
